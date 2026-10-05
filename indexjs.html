@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+
+    <p id="div1">HTML</p>
+    <p id="div2">HTML2</p>
+
+    <div id="d1"></div>
+
+    <p>Colow was changed using style and class</p> 
+    <b>
+    <p class="p3">Tea</p>
+    <p class="p3">Coffee</p>
+    <p class="p3">Boost</p>
+    </b>
+    
+    <script>
+        //ElementbyID
+        //innerText
+        document.getElementById("div1").innerText="Inner Text gor changed  ";
+        //innerHTML
+        document.getElementById("div2").innerHTML="<b>Used bold tag here </b>";
+
+        //HTML tag creating from JS
+        let newtag = document.createElement("p");
+        newtag.innerText="New p tag is created using JS";
+        document.getElementById("d1").append(newtag);
+
+        //Using for loop
+        for(let i=1;i<=5;i++){
+            let newtag1 = document.createElement("h3");
+            newtag1.innerText=" H3 tag is created";
+            document.getElementById("d1").append(newtag1);
+        }
+
+        //ElemnetsbyClass
+        let cls = document.getElementsByClassName("p3");//class is array here
+        for(let j=0; j < cls.length ; j++){
+            cls[j].style.color="brown";
+        }
+    </script>
+</body>
+</html>
