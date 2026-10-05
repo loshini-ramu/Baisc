@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .square{
+            width: 100px;
+            height: 100px;
+        }
+        .red{
+            background-color: red;
+            position: absolute;
+            margin: 10px;
+            z-index: -1;
+        }
+        .green{
+            background-color: green;
+            position: absolute;
+            margin: 20px;
+            z-index: -2;
+        }
+        .blue{
+            background-color: blue;
+            /* position: absolute; */
+            /* margin: 30px; */
+            z-index: 5;
+        }
+         
+    </style>
+
+    <div class="red square"></div>
+    <div class="green square"></div>
+    <div class="blue square"></div>
+
+
+    <style>
+        .flex-box{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+ 
+    </style>
+    <div class="flex-box">
+        <div style="background-color: aqua; padding: 20px;">Item 1</div>
+        <div style="background-color: blanchedalmond; padding: 20px;">Item 2</div>
+        <div style="background-color: cadetblue; padding: 20px;">Item 3</div>
+    </div>
+ 
+
+</body>
+</html>

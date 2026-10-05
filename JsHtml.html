@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1" class="p3">p tag</p>
+    <p id="p2" class="p3">p tag</p>
+
+    <div id="d1">
+    </div>
+
+
+    <script>
+        //html text changing from js using:
+        document.getElementById("p1").innerHTML="This is from JS";
+        // view the test on console using:
+        console.log(document.getElementById("p1").textContent);
+        // placing the p1 tag contents on p2
+        document.getElementById("p2").innerText=document.getElementById("p1").textContent;
+
+        //  repeating a set of code
+        for(let i=0;i<5;i++){
+            //  creating a new html tag from js
+            // we can create any tags like h1, div, span, etc... 
+            let newptag = document.createElement("p");
+            // inserting the contents on the created p tag
+            newptag.innerHTML="New Tag from JS";
+            // we should append it on another tag which already exist in html 
+            document.getElementById("d1").append(newptag);
+        }
+
+        // select group of 
+        let ptag=document.getElementsByClassName("p3");
+
+        //  removeing the tag from js
+        document.getElementById("p2").remove();
+
+        let ptags = document.getElementsByClassName("p3");
+        for (let index = 0; index < ptags.length; index++) {
+        ptags[index].style.color="yellow";
+       }
+    </script>
+</body>
+</html>

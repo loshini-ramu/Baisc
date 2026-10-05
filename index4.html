@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .card{
+            background-color: aliceblue;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            text-align: center;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media (max-width: 640px){
+            .card{
+                grid-template-columns: 1fr;
+            }
+        }
+        @media(max-width: 641px) and (max-width:1200px) {
+            .card{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width:1201px) {
+            .card{
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+
+    <div class="card">
+        <div>Card 1</div>
+        <div>Card 2</div>
+        <div>card 3</div>
+    </div>
+
+    <style>
+        a{
+            color: red;
+            text-decoration: none;
+        }
+        a:hover{
+            color: blue;
+            text-decoration: underline;
+        }
+        a:active{
+            color: green;
+        }
+        a::after{
+            content:"(visited)";
+        }
+
+
+    </style>
+
+    <a href="index.html">Link</a>
+    
+</body>
+</html>   
